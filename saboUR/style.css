@@ -1,0 +1,143 @@
+/* =========================================
+   ESTILOS GERAIS (O Padrão Premium)
+   ========================================= */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    /* Efeito suave ao mudar de página */
+    transition: background-color 0.5s ease; 
+    
+    /* Variáveis padrão (mudam conforme o sabor) */
+    background-color: var(--cor-fundo, #fdf2e9);
+    color: var(--cor-texto, #333);
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: var(--cor-destaque, #d35400);
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+p {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid var(--cor-destaque, #d35400);
+    margin-bottom: 30px;
+}
+
+/* Estilo dos Botões "Voltar" */
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: var(--cor-destaque, #d35400);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+/* =========================================
+   ESTILOS DA PÁGINA INICIAL (INDEX) - AJUSTADO
+   ========================================= */
+   .pagina-inicial {
+    background-color: #fdf2e9; /* Fundo pêssego suave */
+}
+
+.pagina-inicial p {
+    border-top: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    font-size: 1.3rem;
+    margin-bottom: 40px; /* Mais espaço abaixo da frase inicial */
+}
+
+.pagina-inicial ul {
+    list-style: none;
+    width: 100%;
+    max-width: 450px; /* Largura confortável para os botões */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* <--- A MÁGICA: Cria um espaço uniforme entre cada <li> */
+}
+
+.pagina-inicial li {
+    width: 100%;
+}
+
+.pagina-inicial a {
+    display: block;
+    background-color: #ffffff;
+    color: #d35400;
+    border: 2px solid #d35400;
+    padding: 18px; /* Botões um pouco mais altos/gordinhos */
+    border-radius: 15px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(211, 84, 0, 0.1);
+}
+
+.pagina-inicial a:hover {
+    background-color: #d35400;
+    color: #ffffff;
+    transform: scale(1.03); /* Leve aumento ao passar o rato */
+}   
+/* =========================================
+   A MÁGICA DAS CORES POR SABOR
+   ========================================= */
+
+/* Atum: Tons de Azul Marinho e Fresco */
+.atum { --cor-fundo: #ebf5fb; --cor-destaque: #2980b9; --cor-texto: #154360; }
+
+/* Baiana: Tons Quentes e Picantes */
+.baiana { --cor-fundo: #fdedec; --cor-destaque: #e74c3c; --cor-texto: #7b241c; }
+
+/* Calabresa: Vermelho Intenso Defumado */
+.calabresa { --cor-fundo: #f2d7d5; --cor-destaque: #c0392b; --cor-texto: #641e16; }
+
+/* Frango com Catupiry: Laranja e Creme */
+.frango { --cor-fundo: #fef5e7; --cor-destaque: #e67e22; --cor-texto: #873600; }
+
+/* Marguerita: Verde Manjericão */
+.marguerita { --cor-fundo: #e9f7ef; --cor-destaque: #27ae60; --cor-texto: #145a32; }
+
+/* Mussarela: Amarelo Queijo Derretido */
+.mussarela { --cor-fundo: #fcf3cf; --cor-destaque: #f1c40f; --cor-texto: #7d6608; }
+
+/* Napolitana: Vermelho Rústico / Ferrugem */
+.napolitana { --cor-fundo: #fae5d3; --cor-destaque: #d35400; --cor-texto: #6e2c00; }
+
+/* Portuguesa: Tons de Roxo e Rosa Suave */
+.portuguesa { --cor-fundo: #f5eef8; --cor-destaque: #8e44ad; --cor-texto: #4a235a; }
+
+/* Quatro Queijos: Dourado e Ouro */
+.quatro-queijos { --cor-fundo: #fef9e7; --cor-destaque: #d4ac0d; --cor-texto: #7d6608; }
