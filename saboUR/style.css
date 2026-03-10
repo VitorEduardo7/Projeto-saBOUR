@@ -1,143 +1,147 @@
 /* =========================================
-   ESTILOS GERAIS (O Padrão Premium)
-   ========================================= */
-   * {
+   ESTILOS OTIMIZADOS - PIZZA PREMIUM 2026
+   ======================================== */
+   :root {
+    --fonte-principal: 'Segoe UI', system-ui, sans-serif;
+    --sombra-suave: 0 10px 30px rgba(0,0,0,0.08);
+    --sombra-hover: 0 15px 40px rgba(0,0,0,0.15);
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+ * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ body {
+    font-family: var(--fonte-principal);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
-    /* Efeito suave ao mudar de página */
-    transition: background-color 0.5s ease; 
-    
-    /* Variáveis padrão (mudam conforme o sabor) */
-    background-color: var(--cor-fundo, #fdf2e9);
+    padding: 2rem;
+    line-height: 1.6;
+    background: var(--cor-fundo, #fdf2e9);
     color: var(--cor-texto, #333);
-}
-
-h1 {
-    font-size: 2.8rem;
+    transition: var(--transicao);
+ }
+ 
+ main { max-width: 700px; width: 100%; }
+ 
+ h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--cor-destaque, #d35400);
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
     text-align: center;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-}
-
-p {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+ }
+ 
+ p {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
     font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 600px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: var(--sombra-suave);
     border-top: 6px solid var(--cor-destaque, #d35400);
-    margin-bottom: 30px;
-}
-
-/* Estilo dos Botões "Voltar" */
-a {
+    margin-bottom: 2rem;
+ }
+ 
+ a {
     display: inline-block;
     text-decoration: none;
-    font-weight: bold;
-    padding: 12px 30px;
+    font-weight: 600;
+    padding: 1rem 2rem;
     border-radius: 50px;
-    color: #ffffff;
-    background-color: var(--cor-destaque, #d35400);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    color: white;
+    background: var(--cor-destaque, #d35400);
+    transition: var(--transicao);
+    box-shadow: var(--sombra-suave);
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+ }
+ 
+ a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
     filter: brightness(1.1);
-}
-
-/* =========================================
-   ESTILOS DA PÁGINA INICIAL (INDEX) - AJUSTADO
-   ========================================= */
-   .pagina-inicial {
-    background-color: #fdf2e9; /* Fundo pêssego suave */
-}
-
-.pagina-inicial p {
-    border-top: none;
-    box-shadow: none;
+ }
+ 
+ /* PÁGINA INICIAL */
+ .pagina-inicial p {
     background: transparent;
+    box-shadow: none;
+    border-top: none;
     padding: 0;
     font-size: 1.3rem;
-    margin-bottom: 40px; /* Mais espaço abaixo da frase inicial */
-}
-
-.pagina-inicial ul {
+    margin-bottom: 2rem;
+ }
+ 
+ .pagina-inicial ul {
     list-style: none;
+    max-width: 500px;
     width: 100%;
-    max-width: 450px; /* Largura confortável para os botões */
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* <--- A MÁGICA: Cria um espaço uniforme entre cada <li> */
-}
-
-.pagina-inicial li {
-    width: 100%;
-}
-
-.pagina-inicial a {
+    gap: 1rem;
+    margin: 0 auto;
+ }
+ 
+ .pagina-inicial li a {
     display: block;
-    background-color: #ffffff;
-    color: #d35400;
-    border: 2px solid #d35400;
-    padding: 18px; /* Botões um pouco mais altos/gordinhos */
+    background: white;
+    color: var(--cor-destaque, #d35400);
+    border: 2px solid var(--cor-destaque, #d35400);
+    padding: 1.2rem;
     border-radius: 15px;
     font-size: 1.1rem;
-    box-shadow: 0 4px 6px rgba(211, 84, 0, 0.1);
-}
-
-.pagina-inicial a:hover {
-    background-color: #d35400;
-    color: #ffffff;
-    transform: scale(1.03); /* Leve aumento ao passar o rato */
-}   
-/* =========================================
-   A MÁGICA DAS CORES POR SABOR
-   ========================================= */
-
-/* Atum: Tons de Azul Marinho e Fresco */
-.atum { --cor-fundo: #ebf5fb; --cor-destaque: #2980b9; --cor-texto: #154360; }
-
-/* Baiana: Tons Quentes e Picantes */
-.baiana { --cor-fundo: #fdedec; --cor-destaque: #e74c3c; --cor-texto: #7b241c; }
-
-/* Calabresa: Vermelho Intenso Defumado */
-.calabresa { --cor-fundo: #f2d7d5; --cor-destaque: #c0392b; --cor-texto: #641e16; }
-
-/* Frango com Catupiry: Laranja e Creme */
-.frango { --cor-fundo: #fef5e7; --cor-destaque: #e67e22; --cor-texto: #873600; }
-
-/* Marguerita: Verde Manjericão */
-.marguerita { --cor-fundo: #e9f7ef; --cor-destaque: #27ae60; --cor-texto: #145a32; }
-
-/* Mussarela: Amarelo Queijo Derretido */
-.mussarela { --cor-fundo: #fcf3cf; --cor-destaque: #f1c40f; --cor-texto: #7d6608; }
-
-/* Napolitana: Vermelho Rústico / Ferrugem */
-.napolitana { --cor-fundo: #fae5d3; --cor-destaque: #d35400; --cor-texto: #6e2c00; }
-
-/* Portuguesa: Tons de Roxo e Rosa Suave */
-.portuguesa { --cor-fundo: #f5eef8; --cor-destaque: #8e44ad; --cor-texto: #4a235a; }
-
-/* Quatro Queijos: Dourado e Ouro */
-.quatro-queijos { --cor-fundo: #fef9e7; --cor-destaque: #d4ac0d; --cor-texto: #7d6608; }
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: center;
+ }
+ 
+ .pagina-inicial li a:hover {
+    background: var(--cor-destaque, #d35400);
+    color: white;
+    transform: scale(1.02);
+ }
+ 
+ /* HEADER E FOOTER NOVOS */
+ header, footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+ }
+ 
+ header h1 { font-size: 1.5rem; margin: 0; }
+ footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+ }
+ 
+ /* RESPONSIVO */
+ @media (max-width: 768px) {
+    body { padding: 1rem; }
+    h1 { margin-bottom: 1rem; }
+    p { padding: 1.5rem 1rem; }
+ }
+ 
+ /* TEMAS POR SABOR (mantidos e otimizados) */
+ .atum { --cor-fundo: #ebf5fb; --cor-destaque: #2980b9; --cor-texto: #154360; }
+ .baiana { --cor-fundo: #fdedec; --cor-destaque: #e74c3c; --cor-texto: #7b241c; }
+ .calabresa { --cor-fundo: #f2d7d5; --cor-destaque: #c0392b; --cor-texto: #641e16; }
+ .frango { --cor-fundo: #fef5e7; --cor-destaque: #e67e22; --cor-texto: #873600; }
+ .marguerita { --cor-fundo: #e9f7ef; --cor-destaque: #27ae60; --cor-texto: #145a32; }
+ .mussarela { --cor-fundo: #fcf3cf; --cor-destaque: #f1c40f; --cor-texto: #7d6608; }
+ .napolitana { --cor-fundo: #fae5d3; --cor-destaque: #d35400; --cor-texto: #6e2c00; }
+ .portuguesa { --cor-fundo: #f5eef8; --cor-destaque: #8e44ad; --cor-texto: #4a235a; }
+ .quatro-queijos { --cor-fundo: #fef9e7; --cor-destaque: #d4ac0d; --cor-texto: #7d6608; }
+ 
+ /* SCROLL SUAVE */
+ html { scroll-behavior: smooth; }
+ 
